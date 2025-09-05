@@ -1,0 +1,11 @@
+TestCase	InputSnippet	Expected
+01_leading_underscore.ib	_hello = 1	IDENTIFIER '_hello', OP_ASSIGN '=', NUMBER '1'
+02_func_keyword_and_identifier.ib	func add(a,b) {{...}} funcx = 12	KEYWORD 'func', IDENTIFIER 'add', ..., IDENTIFIER 'funcx', OP_ASSIGN, NUMBER '12'
+03_leading_dot_number.ib	.5 + 1.5e2	NUMBER '.5', OP_PLUS '+', NUMBER '1.5e2'
+04_multiline_string.ib	$This is a\nmulti-line\nstring$	STRING 'This is a\nmulti-line\nstring'
+05_angle_not_equal.ib	x <> y	IDENTIFIER 'x', OP_NE '<>', IDENTIFIER 'y'
+06_nested_comments.ib	/* outer /* inner */ still outer */	ERROR: NestedCommentError
+07_name_and_id.ib	ASIF 2220139 139ASIF	IDENTIFIER 'ASIF', NUMBER '2220139', IDENTIFIER '139ASIF'
+08_malformed_exponent.ib	1.2e+ 3	ERROR: MalformedNumberError
+09_unterminated_string.ib	$hello world	ERROR: UnterminatedStringError
+10_singleline_comment.ib	//...\nif 139var1 else	KEYWORD 'if', IDENTIFIER '139var1', KEYWORD 'else'

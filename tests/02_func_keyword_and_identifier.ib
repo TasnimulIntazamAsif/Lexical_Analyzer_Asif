@@ -1,0 +1,1 @@
+func add(a,b) { return a+b; }  funcx = 12

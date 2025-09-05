@@ -1,0 +1,52 @@
+{
+  "01_leading_underscore.ib": {
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"_hello\",\n    \"line\": 1,\n    \"column\": 1\n  },\n  {\n    \"type\": \"OP_ASSIGN\",\n    \"lexeme\": \"=\",\n    \"line\": 1,\n    \"column\": 8\n  },\n  {\n    \"type\": \"NUMBER\",\n    \"lexeme\": \"1\",\n    \"line\": 1,\n    \"column\": 10\n  }\n]\n",
+    "stderr": ""
+  },
+  "02_func_keyword_and_identifier.ib": {
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"type\": \"KEYWORD\",\n    \"lexeme\": \"func\",\n    \"line\": 1,\n    \"column\": 1\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"add\",\n    \"line\": 1,\n    \"column\": 6\n  },\n  {\n    \"type\": \"LPAREN\",\n    \"lexeme\": \"(\",\n    \"line\": 1,\n    \"column\": 9\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"a\",\n    \"line\": 1,\n    \"column\": 10\n  },\n  {\n    \"type\": \"COMMA\",\n    \"lexeme\": \",\",\n    \"line\": 1,\n    \"column\": 11\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"b\",\n    \"line\": 1,\n    \"column\": 12\n  },\n  {\n    \"type\": \"RPAREN\",\n    \"lexeme\": \")\",\n    \"line\": 1,\n    \"column\": 13\n  },\n  {\n    \"type\": \"LBRACE\",\n    \"lexeme\": \"{\",\n    \"line\": 1,\n    \"column\": 15\n  },\n  {\n    \"type\": \"KEYWORD\",\n    \"lexeme\": \"return\",\n    \"line\": 1,\n    \"column\": 17\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"a\",\n    \"line\": 1,\n    \"column\": 24\n  },\n  {\n    \"type\": \"OP_PLUS\",\n    \"lexeme\": \"+\",\n    \"line\": 1,\n    \"column\": 25\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"b\",\n    \"line\": 1,\n    \"column\": 26\n  },\n  {\n    \"type\": \"SEMICOLON\",\n    \"lexeme\": \";\",\n    \"line\": 1,\n    \"column\": 27\n  },\n  {\n    \"type\": \"RBRACE\",\n    \"lexeme\": \"}\",\n    \"line\": 1,\n    \"column\": 29\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"funcx\",\n    \"line\": 1,\n    \"column\": 32\n  },\n  {\n    \"type\": \"OP_ASSIGN\",\n    \"lexeme\": \"=\",\n    \"line\": 1,\n    \"column\": 38\n  },\n  {\n    \"type\": \"NUMBER\",\n    \"lexeme\": \"12\",\n    \"line\": 1,\n    \"column\": 40\n  }\n]\n",
+    "stderr": ""
+  },
+  "03_leading_dot_number.ib": {
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"type\": \"NUMBER\",\n    \"lexeme\": \".5\",\n    \"line\": 1,\n    \"column\": 1\n  },\n  {\n    \"type\": \"OP_PLUS\",\n    \"lexeme\": \"+\",\n    \"line\": 1,\n    \"column\": 4\n  },\n  {\n    \"type\": \"NUMBER\",\n    \"lexeme\": \"1.5e2\",\n    \"line\": 1,\n    \"column\": 6\n  }\n]\n",
+    "stderr": ""
+  },
+  "04_multiline_string.ib": {
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"type\": \"STRING\",\n    \"lexeme\": \"This is a\\nmulti-line\\nstring\",\n    \"line\": 1,\n    \"column\": 1\n  }\n]\n",
+    "stderr": ""
+  },
+  "05_angle_not_equal.ib": {
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"x\",\n    \"line\": 1,\n    \"column\": 1\n  },\n  {\n    \"type\": \"OP_NE\",\n    \"lexeme\": \"<>\",\n    \"line\": 1,\n    \"column\": 3\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"y\",\n    \"line\": 1,\n    \"column\": 6\n  }\n]\n",
+    "stderr": ""
+  },
+  "06_nested_comments.ib": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[LEXER ERROR] Nested comment found at line 1, column 10\n"
+  },
+  "07_name_and_id.ib": {
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"ASIF\",\n    \"line\": 1,\n    \"column\": 1\n  },\n  {\n    \"type\": \"NUMBER\",\n    \"lexeme\": \"2220139\",\n    \"line\": 1,\n    \"column\": 6\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"139ASIF\",\n    \"line\": 1,\n    \"column\": 15\n  }\n]\n",
+    "stderr": ""
+  },
+  "08_malformed_exponent.ib": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[LEXER ERROR] Malformed exponent at line 1, column 1\n"
+  },
+  "09_unterminated_string.ib": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[LEXER ERROR] Unterminated string starting at line 1, column 1\n"
+  },
+  "10_singleline_comment.ib": {
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"type\": \"KEYWORD\",\n    \"lexeme\": \"if\",\n    \"line\": 2,\n    \"column\": 1\n  },\n  {\n    \"type\": \"IDENTIFIER\",\n    \"lexeme\": \"139var1\",\n    \"line\": 2,\n    \"column\": 4\n  },\n  {\n    \"type\": \"KEYWORD\",\n    \"lexeme\": \"else\",\n    \"line\": 2,\n    \"column\": 12\n  }\n]\n",
+    "stderr": ""
+  }
+}
